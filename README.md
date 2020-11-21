@@ -63,9 +63,9 @@ $ docker rm cups
   `cups`)
 * `--restart`: restart policy for how to handle restarts (e.g. `always` restart)
 * `--net`: network to join (e.g. the `host` network)
-* `-v ~/airprint_data/config:/config`: where the persistent printer configs
+* `-v /opt/appdata/cups/config:/config`: where the persistent printer configs
    will be stored
-* `-v ~/airprint_data/services:/services`: where the Avahi service files will
+* `-v /opt/appdata/cups/services:/services`: where the Avahi service files will
    be generated
 * `-e CUPSADMIN`: the CUPS admin user you want created
 * `-e CUPSPASSWORD`: the password for the CUPS admin user
@@ -73,7 +73,7 @@ $ docker rm cups
 * `--device /dev/usb`: device mounted for interacting with USB printers
 
 ## Using
-CUPS will be configurable at http://host-server-ip:631 using the
+CUPS will be configurable at <http://host-server-ip:631> using the
 CUPSADMIN/CUPSPASSWORD when you do something administrative.
 
 If the `/services` volume isn't mapping to `/etc/avahi/services` then you will
