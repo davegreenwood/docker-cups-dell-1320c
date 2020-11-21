@@ -1,14 +1,6 @@
 # About
 
-Specically to run an old Dell 1320c printer.
-
-Modified copy of source code at:
-
-https://github.com/quadportnick/docker-cups-airprint
-
-and:
-
-https://github.com/RagingTiger/docker-cups-airprint
+Generally useful, but specifically to run an old Dell 1320c printer.
 
 This i386/debian:buster-slim Docker image runs a CUPS instance that is meant
 as an AirPrint relay for printers that are already on the network but not AirPrint capable.
