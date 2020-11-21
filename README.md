@@ -24,6 +24,11 @@ There was never a driver for the Dell 1320c on linux, but the FujiXerox C525 32b
 The host must have avahi-daemon installed and running.
 
 
+## Build
+
+   docker build -t dgnwd/cups-airprint:latest .
+
+
 ## Create
 Creating a container is often more desirable than directly running it:
 ```
@@ -32,13 +37,13 @@ $ docker create \
        --restart=always \
        --net=host \
        -v /var/run/dbus:/var/run/dbus \
-       -v ~/airprint_data/config:/config \
-       -v ~/airprint_data/services:/services \
+       -v /opt/appdata/cups/config:/config \
+       -v /opt/appdata/cups/services:/services \
        --device /dev/bus \
        --device /dev/usb \
        -e CUPSADMIN="admin" \
        -e CUPSPASSWORD="password" \
-       dgrnwd/cups-airprint:latest
+       dgnwd/cups-airprint:latest
 ```
 Follow this with `docker start` and your cups/airprint printer is running:
 ```
@@ -48,7 +53,7 @@ To stop the container simply run:
 ```
 $ docker stop cups
 ```
-To remove the conainer simply run:
+To remove the container simply run:
 ```
 $ docker rm cups
 ```
