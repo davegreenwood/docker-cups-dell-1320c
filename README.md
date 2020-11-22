@@ -18,7 +18,7 @@ The host must have avahi-daemon installed and running.
 
 ## Build
 
-   docker build -t dgnwd/cups-airprint:latest .
+   docker build -t dgrnwd/cups-airprint .
 
 
 ## Create
@@ -35,7 +35,7 @@ $ docker create \
        --device /dev/usb \
        -e CUPSADMIN="admin" \
        -e CUPSPASSWORD="password" \
-       dgrnwd/cups-airprint:latest
+       dgrnwd/cups-airprint
 ```
 Follow this with `docker start` and your cups/airprint printer is running:
 ```
