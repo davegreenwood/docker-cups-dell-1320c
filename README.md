@@ -35,7 +35,7 @@ $ docker create \
        --device /dev/usb \
        -e CUPSADMIN="admin" \
        -e CUPSPASSWORD="password" \
-       dgnwd/cups-airprint:latest
+       dgrnwd/cups-airprint:latest
 ```
 Follow this with `docker start` and your cups/airprint printer is running:
 ```
